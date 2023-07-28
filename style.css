@@ -1,0 +1,443 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+  font-family: sans-serif;
+}
+
+.header{
+    text-align: right;
+    margin: auto;
+   
+}
+
+.logo1 img{
+    float: right;
+    width: 300px;
+    height: auto;
+}
+.logo {
+    order: 1;
+  }
+
+#img logo{
+    float: right;
+    width: 100%;
+    flex: 1; 
+    
+}
+
+.my-div {
+    border: 1px solid #ffffff;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.content-container {
+    align-items: center; /* Vertically center the content within the container */
+    margin: 0 auto; /* Optional: Center the container horizontally */
+    position: relative;
+    width:100%;
+   
+}
+.light-container {
+    align-items: center; /* Vertically center the content within the container */
+    margin: 0 auto; /* Optional: Center the container horizontally */
+    position: relative;
+    width:100%;
+    text-indent: 10px;
+   
+}
+.content-container1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 0px;
+  }
+
+
+
+.content-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #eaddf0;
+    padding: 0px;
+  }
+
+  .text-box {
+    
+    text-align: left; /* Align the text within the text box to the left */
+    padding: 0px; /* Optional: Add padding to the text box for spacing */
+    border: 10px solid #eaddf0; /* Optional: Add a border around the text box for styling */
+    background-color: #eaddf0;
+    width:40%;
+    height:50%;
+    
+  }
+  
+  .text-box p {
+    margin: 0; /* Optional: Remove default margin for the paragraph */
+    
+  }
+
+  
+  /* Button Styles */
+  .register-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-image: url('image/REGISTER_NOW.jpg');
+    background-size: cover;
+    color: transparent;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .register-button:hover {
+    opacity: 0.8;
+  }
+  
+  
+  .button-div {
+    text-align: center; /* Center the button horizontally */
+  }
+  .submit-button {
+    display:flex;
+    width: 250px;
+    height: 100px;
+    background-image: url('image/AGREE_&_SUBMIT_ICON.fw.png');
+    background-size: cover;
+    font-size: 16px;
+    color: #ffffff;
+    border-style: none;
+    cursor: pointer;
+    
+  }
+
+ 
+.red-text {
+    color: red;
+    font-weight: bold;
+    justify-content: space-evenly;
+  }
+
+@layer setupPage, step2styles;
+
+summary {
+  
+  position: relative;
+  
+}
+summary::marker {
+  content: none;
+}
+summary::before,
+summary::after {
+  content: '';
+}
+summary::before,
+summary::after {
+    width: .75em;
+    height: 0;
+    border-bottom: 2px solid;
+    border-top: 2px solid;
+    position: absolute;
+    top: calc(50% - 1px);
+    right:  0;
+    transform: translateY(-50%);
+  }
+summary::after {
+  transform: rotate(90deg);
+  transform-origin: 50% 50%;
+}
+[open] summary::after {
+  transform: rotate(0deg);
+}
+
+
+/* styles ported over from the second example */
+@layer step2styles {
+  details {
+   
+    padding: 0 1rem;
+    background: rgb(221, 211, 211);
+    outline-style:groove;
+    outline-color:#e1e9ef;  
+    max-width:710px;
+    margin: 0 auto;
+    text-align: left;
+    
+  }
+  details + details {
+    border-top: none;
+  }
+  details[open] {
+   
+      padding-bottom: 1em;
+  }  
+  summary {
+    padding: 1rem 2em 1rem 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+/* cascade layer: page setup. Doesn't impact the accordion */
+@layer setupPage {
+  
+:root {
+  font-size: 112.5%;
+  line-height: 1.5;
+}
+.class faqs {
+  background: #ffffff;
+  color: #226daa;
+  font-family: "Gill Sans", sans-serif;
+  margin: 10px 0;
+}
+* {
+  box-sizing: border-box;
+}
+
+aside {
+  width: 38em;
+  max-width: 98vw;
+}
+}
+
+.class faq-container {
+    max-width: 600px; /* Optional: Set the maximum width to control the container's width */
+    margin: 0 auto; /* Center the container horizontally */
+
+    
+  }
+  
+  .faq-container .heading {
+    text-align: center; /* Center the heading */
+    font-weight: bold; /* Make the heading text bold */
+  }
+  
+  .faq-container details {
+    margin: 40px 0; /* Add some space between the FAQ items */ 
+  }
+
+  #wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  #c1 {
+    margin-right: 10px; /* Optional: Add some spacing between c1 and c2 */
+  }
+
+  
+  #c2 {
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  #c2 p strong {
+    color: black;
+    font-weight: bold;
+  }
+  
+  #c2 p span {
+    color: red;
+  }
+
+  .icons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+  }
+  
+  .icons-container figure {
+    margin: 10px; 
+    text-align: center; 
+  }
+  
+  .icons-container img {
+    max-width: 100px; 
+  }
+  
+  .icons-container span {
+    font-size: 20px;
+    display: block; 
+    margin-top: 5px; 
+  }
+
+  .image-container {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .image-container img {
+    width: 100%; 
+    height: auto; 
+  }
+
+ 
+
+
+  .content form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+  }
+  form .user-details .input-box{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+  }
+  form .input-box span.details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  .user-details .input-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+  }
+  .user-details .input-box input:focus,
+  .user-details .input-box input:valid{
+    border-color: #9b59b6;
+  }
+   form .gender-details .gender-title{
+    font-size: 20px;
+    font-weight: 500;
+   }
+   form .category{
+     display: flex;
+     width: 80%;
+     margin: 14px 0 ;
+     justify-content: space-between;
+   }
+   form .category label{
+     display: flex;
+     align-items: center;
+     cursor: pointer;
+   }
+   form .category label .dot{
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background: #d9d9d9;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+  }
+   #dot-1:checked ~ .category label .one,
+   #dot-2:checked ~ .category label .two,
+   #dot-3:checked ~ .category label .three{
+     background: #9b59b6;
+     border-color: #d9d9d9;
+   }
+   form input[type="radio"]{
+     display: none;
+   }
+   form .button{
+     height: 45px;
+     margin: 35px 0
+   }
+   form .button input{
+     height: 100%;
+     width: 100%;
+     border-radius: 5px;
+     border: none;
+     color: #fff;
+     font-size: 18px;
+     font-weight: 500;
+     letter-spacing: 1px;
+     cursor: pointer;
+     transition: all 0.3s ease;
+     background: linear-gradient(135deg, #71b7e6, #9b59b6);
+   }
+   form .button input:hover{
+    /* transform: scale(0.99); */
+    background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+    }
+   @media(max-width: 584px){
+   .container{
+    max-width: 100%;
+  }
+  form .user-details .input-box{
+      margin-bottom: 15px;
+      width: 100%;
+    }
+    form .category{
+      width: 100%;
+    }
+    .content form .user-details{
+      max-height: 300px;
+      overflow-y: scroll;
+    }
+    .user-details::-webkit-scrollbar{
+      width: 5px;
+      
+    }
+    }
+    @media(max-width: 459px){
+    .container .content .category{
+      flex-direction: column;
+    }
+  }
+
+  input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+  }
+
+  option {
+    padding: 5px 10px;
+  }
+
+  .checkbox-label {
+    margin-right: 20px;
+    cursor: pointer;
+  }
+
+  .policy {
+    display: flex;
+    align-items:start;
+    text-align: left;
+  }
+
+ .descrip-contain{
+    max-width: 800px;
+    margin: 0;
+ }
+
+.descrip-contain .floating-image {
+    max-width:500px;
+    max-height:400px;
+    
+ }
+
+ .descrip-contain .floating-image.right {
+    float:left;
+    margin-right:0px;
+ }
